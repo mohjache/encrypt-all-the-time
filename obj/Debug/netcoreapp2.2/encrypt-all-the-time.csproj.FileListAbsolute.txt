@@ -1,0 +1,14 @@
+/Users/anaruherbert/Projects/encrypt-all-the-time/bin/Debug/netcoreapp2.2/encrypt-all-the-time.deps.json
+/Users/anaruherbert/Projects/encrypt-all-the-time/bin/Debug/netcoreapp2.2/encrypt-all-the-time.runtimeconfig.json
+/Users/anaruherbert/Projects/encrypt-all-the-time/bin/Debug/netcoreapp2.2/encrypt-all-the-time.runtimeconfig.dev.json
+/Users/anaruherbert/Projects/encrypt-all-the-time/bin/Debug/netcoreapp2.2/encrypt-all-the-time.dll
+/Users/anaruherbert/Projects/encrypt-all-the-time/bin/Debug/netcoreapp2.2/encrypt-all-the-time.pdb
+/Users/anaruherbert/Projects/encrypt-all-the-time/obj/Debug/netcoreapp2.2/encrypt-all-the-time.csprojAssemblyReference.cache
+/Users/anaruherbert/Projects/encrypt-all-the-time/obj/Debug/netcoreapp2.2/encrypt-all-the-time.csproj.CoreCompileInputs.cache
+/Users/anaruherbert/Projects/encrypt-all-the-time/obj/Debug/netcoreapp2.2/encrypt-all-the-time.RazorAssemblyInfo.cache
+/Users/anaruherbert/Projects/encrypt-all-the-time/obj/Debug/netcoreapp2.2/encrypt-all-the-time.RazorAssemblyInfo.cs
+/Users/anaruherbert/Projects/encrypt-all-the-time/obj/Debug/netcoreapp2.2/encrypt-all-the-time.AssemblyInfoInputs.cache
+/Users/anaruherbert/Projects/encrypt-all-the-time/obj/Debug/netcoreapp2.2/encrypt-all-the-time.AssemblyInfo.cs
+/Users/anaruherbert/Projects/encrypt-all-the-time/obj/Debug/netcoreapp2.2/encrypt-all-the-time.RazorTargetAssemblyInfo.cache
+/Users/anaruherbert/Projects/encrypt-all-the-time/obj/Debug/netcoreapp2.2/encrypt-all-the-time.dll
+/Users/anaruherbert/Projects/encrypt-all-the-time/obj/Debug/netcoreapp2.2/encrypt-all-the-time.pdb
