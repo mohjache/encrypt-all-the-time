@@ -38,7 +38,7 @@ namespace encrypt_all_the_time
              if (path?.Length > 1 && path.StartsWith("/"))
              {
                  context.Response.ContentType = "plain/text";
-                 await context.Response.WriteAsync(File.ReadAllText($"{path.Substring(1)}.<thumbprint>"));
+                 await context.Response.WriteAsync(File.ReadAllText($"{path.Substring(1)}"));
 
              }
          });
@@ -58,14 +58,14 @@ namespace encrypt_all_the_time
                     var httpChallenge = await authz.Http();
                     var keyAuthz = httpChallenge.KeyAuthz;
 
-                    File.WriteAllText("./.well-known/acme-challenge/" + httpChallenge.Token, keyAuthz);
+                    File.WriteAllText("./" + httpChallenge.Token, keyAuthz);
 
                     var validaion = await httpChallenge.Validate();
                     while (validaion.Status.Value == ChallengeStatus.Pending)
                     {
                         await Task.Delay(10000);
-                        Console.WriteLine(validaion.Status.Value);
                         validaion = await httpChallenge.Validate();
+                        Console.WriteLine(validaion.Status.Value);
                     }
 
                     if (validaion.Status == ChallengeStatus.Valid)
@@ -80,7 +80,21 @@ namespace encrypt_all_the_time
                             OrganizationUnit = "Dev",
                             CommonName = ngrokUrl,
                         }, privateKey);
+
+
+                        var certPem = cert.ToPem();
+                        var pfxBuilder = cert.ToPfx(privateKey);
+                        var pfx = pfxBuilder.Build("my-cert", "abcd1234");
+
+                        File.WriteAllBytes("./my-free-cert.pfx", pfx);
+                        await acme.RevokeCertificate(cert.Certificate.ToDer(), RevocationReason.AffiliationChanged, privateKey);
+
+                        Console.WriteLine("Wooo!");
+
+
                     }
+
+                    File.Delete("./" + httpChallenge.Token);
                 }
                 catch (Exception exception)
                 {

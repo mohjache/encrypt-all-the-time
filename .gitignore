@@ -35,3 +35,9 @@ msbuild.wrn
 
 # Visual Studio 2015
 .vs/
+obj/Debug/netcoreapp2.2/encrypt-all-the-time.pdb
+bin/Debug/.DS_Store
+bin/Debug/netcoreapp2.2/encrypt-all-the-time.dll
+bin/Debug/netcoreapp2.2/encrypt-all-the-time.pdb
+obj/Debug/netcoreapp2.2/encrypt-all-the-time.dll
+obj/Debug/netcoreapp2.2/encrypt-all-the-time.csprojAssemblyReference.cache
