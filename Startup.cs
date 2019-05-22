@@ -47,8 +47,8 @@ namespace encrypt_all_the_time
             {
                 try
                 {
-                    const string ngrokUrl = "";
-                    const string userEmailAddress = "";
+                    const string ngrokUrl = "fc404848.ngrok.io";
+                    const string userEmailAddress = "asdasd@adsdasd.com";
                     var acme = new AcmeContext(WellKnownServers.LetsEncryptStagingV2);
                     var account = await acme.NewAccount(userEmailAddress, true);
 
@@ -89,7 +89,7 @@ namespace encrypt_all_the_time
                         File.WriteAllBytes("./my-free-cert.pfx", pfx);
                         await acme.RevokeCertificate(cert.Certificate.ToDer(), RevocationReason.AffiliationChanged, privateKey);
 
-                        Console.WriteLine("Wooo!");
+                        await context.Response.WriteAsync("Woo!");
 
 
                     }
