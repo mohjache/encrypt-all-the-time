@@ -90,7 +90,7 @@ namespace encrypt_all_the_time
                         await acme.RevokeCertificate(cert.Certificate.ToDer(), RevocationReason.AffiliationChanged, privateKey);
 
                         await context.Response.WriteAsync("Woo!");
-
+                        //openssl pkcs12 -info -in my-free-cert.pfx
 
                     }
 
